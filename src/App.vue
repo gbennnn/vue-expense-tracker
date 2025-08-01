@@ -1,11 +1,28 @@
-<script setup></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <Header />
+  <div class="container">
+    <Balance/>
+    <IncomeExpenses />
+    <TransactionList :transactions="transactions" />
+    <AddTransaction />
+
+  </div>
 </template>
 
-<style scoped></style>
+
+<script setup>
+  import Header from './components/Header.vue';
+  import Balance from './components/Balance.vue';
+  import IncomeExpenses from './components/IncomeExpenses.vue';
+  import TransactionList from './components/TransactionList.vue';
+  import AddTransaction from './components/AddTransaction.vue';
+
+  import { ref } from 'vue';
+
+  const transactions = ref([
+    { id: 1, text: 'Cash', amount: -400 },
+    { id: 2, text: 'Paycheck', amount: 1000 },
+    { id: 3, text: 'Book', amount: -10 },
+    { id: 4, text: 'Camera', amount: 150 }
+  ]);
+</script>
