@@ -1,19 +1,32 @@
 <template>
   <Header />
   <div class="container">
-    <Balance :total="total" />
-    <IncomeExpenses :income="income" :expenses="expenses" />
-    <Statistics 
-      :transactions="transactions" 
-      :income="income" 
-      :expenses="expenses"
-      v-if="transactions.length > 0"
-    />
-    <TransactionList 
-      :transactions="transactions" 
-      @delete-transaction="deleteTransaction"
-    />
-    <AddTransaction @add-transaction="addTransaction" />
+    <div class="balance-section">
+      <Balance :total="total" />
+    </div>
+    
+    <div class="income-expenses-section">
+      <IncomeExpenses :income="income" :expenses="expenses" />
+    </div>
+    
+    <div class="statistics-section" v-if="transactions.length > 0">
+      <Statistics 
+        :transactions="transactions" 
+        :income="income" 
+        :expenses="expenses"
+      />
+    </div>
+    
+    <div class="transaction-section">
+      <TransactionList 
+        :transactions="transactions" 
+        @delete-transaction="deleteTransaction"
+      />
+    </div>
+    
+    <div class="add-transaction-section">
+      <AddTransaction @add-transaction="addTransaction" />
+    </div>
   </div>
   <ToastContainer />
 </template>

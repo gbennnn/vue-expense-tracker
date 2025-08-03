@@ -1,4 +1,4 @@
-# 💸 Vue Expense Tracker
+# Vue Expense Tracker
 
 <div align="center">
 
@@ -58,7 +58,7 @@ Vue Expense Tracker adalah aplikasi manajemen keuangan personal yang membantu pe
 4. **Open browser**
    Buka `http://localhost:5173`
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Vue.js 3** - Progressive JavaScript framework
 - **Composition API** - Modern Vue development approach

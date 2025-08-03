@@ -136,14 +136,66 @@ const submitForm = async (e) => {
 <style scoped>
 .transaction-form {
   background: white;
-  padding: 20px;
   border-radius: 8px;
   box-shadow: var(--box-shadow);
   margin-top: 20px;
 }
 
+/* Desktop form */
+@media (min-width: 1024px) {
+  .transaction-form {
+    padding: 30px;
+    margin-top: 30px;
+  }
+  
+  .transaction-form h3 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+}
+
+/* Tablet form */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .transaction-form {
+    padding: 25px;
+    margin-top: 25px;
+  }
+  
+  .transaction-form h3 {
+    font-size: 20px;
+    margin-bottom: 22px;
+  }
+}
+
+/* Mobile form */
+@media (max-width: 767px) {
+  .transaction-form {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .transaction-form h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+
 .form-control {
   margin-bottom: 20px;
+}
+
+/* Desktop form control */
+@media (min-width: 1024px) {
+  .form-control {
+    margin-bottom: 25px;
+  }
+}
+
+/* Tablet form control */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .form-control {
+    margin-bottom: 22px;
+  }
 }
 
 .form-control label {
@@ -153,14 +205,63 @@ const submitForm = async (e) => {
   color: #333;
 }
 
+/* Desktop labels */
+@media (min-width: 1024px) {
+  .form-control label {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+/* Tablet labels */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .form-control label {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+}
+
+/* Mobile labels */
+@media (max-width: 767px) {
+  .form-control label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+}
+
 .form-control input,
 .form-control select {
   width: 100%;
-  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 16px;
   transition: border-color 0.3s ease;
+}
+
+/* Desktop inputs */
+@media (min-width: 1024px) {
+  .form-control input,
+  .form-control select {
+    padding: 12px 15px;
+    font-size: 16px;
+  }
+}
+
+/* Tablet inputs */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .form-control input,
+  .form-control select {
+    padding: 11px 13px;
+    font-size: 15px;
+  }
+}
+
+/* Mobile inputs */
+@media (max-width: 767px) {
+  .form-control input,
+  .form-control select {
+    padding: 10px 12px;
+    font-size: 16px; /* Keep 16px on mobile to prevent zoom */
+  }
 }
 
 .form-control input:focus,
@@ -177,16 +278,62 @@ const submitForm = async (e) => {
 
 .error-message {
   color: #e74c3c;
-  font-size: 12px;
   margin-top: 4px;
   display: block;
 }
 
+/* Desktop error message */
+@media (min-width: 1024px) {
+  .error-message {
+    font-size: 13px;
+    margin-top: 6px;
+  }
+}
+
+/* Tablet error message */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .error-message {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}
+
+/* Mobile error message */
+@media (max-width: 767px) {
+  .error-message {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+}
+
 .helper-text {
   color: #666;
-  font-size: 12px;
   margin-top: 4px;
   display: block;
+}
+
+/* Desktop helper text */
+@media (min-width: 1024px) {
+  .helper-text {
+    font-size: 13px;
+    margin-top: 6px;
+  }
+}
+
+/* Tablet helper text */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .helper-text {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}
+
+/* Mobile helper text */
+@media (max-width: 767px) {
+  .helper-text {
+    font-size: 12px;
+    margin-top: 4px;
+  }
 }
 
 .btn:disabled {
@@ -200,5 +347,21 @@ select {
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 20px;
+}
+
+/* Desktop select icon */
+@media (min-width: 1024px) {
+  select {
+    background-position: right 15px center;
+    background-size: 22px;
+  }
+}
+
+/* Tablet select icon */
+@media (min-width: 768px) and (max-width: 1023px) {
+  select {
+    background-position: right 13px center;
+    background-size: 21px;
+  }
 }
 </style>
